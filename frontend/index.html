@@ -1,0 +1,73 @@
+cat > index.html <<'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudDesk Support Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>☁ CloudDesk</h2>
+    <span>Support Center</span>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>How can we help you?</h1>
+        <p>Submit a support request to our team.</p>
+    </section>
+
+    <section class="container">
+        <div class="card">
+            <h2>Create Support Ticket</h2>
+
+            <form id="ticketForm">
+                <label>Full Name</label>
+                <input id="name" required placeholder="Your name">
+
+                <label>Email</label>
+                <input id="email" type="email" required placeholder="Your email">
+
+                <label>Subject</label>
+                <input id="subject" required placeholder="Ticket subject">
+
+                <label>Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option>Technical Support</option>
+                    <option>Account Issue</option>
+                    <option>Billing</option>
+                </select>
+
+                <label>Priority</label>
+                <select id="priority">
+                    <option>Low</option>
+                    <option selected>Medium</option>
+                    <option>High</option>
+                </select>
+
+                <label>Description</label>
+                <textarea id="description" required></textarea>
+
+                <button type="submit">Submit Ticket</button>
+            </form>
+
+            <p id="message"></p>
+        </div>
+
+        <div class="card">
+            <h2>Recent Tickets</h2>
+            <div id="ticketList">No tickets submitted yet.</div>
+        </div>
+    </section>
+</main>
+
+<footer>AWS Serverless Support Ticket Management System</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+EOF

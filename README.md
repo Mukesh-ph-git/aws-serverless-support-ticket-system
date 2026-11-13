@@ -27,7 +27,7 @@ The project also includes a Jenkins CI/CD pipeline that automatically validates 
 
 ### Architecture diagram
 
-![AWS Serverless Support Ticket Management System Architecture](docs/aws-architecture.png)
+![AWS Serverless Support Ticket Management System Architecture](aws-architecture.png)
 
 ## 3. AWS Services Used
 

@@ -94,15 +94,15 @@ https://l51zpbva13.execute-api.us-east-1.amazonaws.com
 
 ### SQS and SNS
 
-- Created SQS queue: `SupportTicketNotifications`.
+- Created SQS queue `SupportTicketNotifications`.
 - Configured SQS event source mapping to `ProcessSupportTicket`.
 - Configured batch size of 10.
-- Created SNS topic: `SupportTicketAlerts`.
+- Created SNS topic `SupportTicketAlerts`.
 - Configured and confirmed email subscription.
 
 ### Secrets Manager
 
-- Created secret: `SupportTicketAppConfig`.
+- Created secret `SupportTicketAppConfig`.
 - Stored application configuration.
 - Configured Lambda to retrieve the secret using its ARN.
 - Verified secret retrieval through CloudWatch logs.

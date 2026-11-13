@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -22,6 +23,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Support Ticket application build completed'
+            }
+        }
+
+        stage('Deploy to S3') {
+            steps {
+                sh '''
+                    aws s3 sync frontend/ s3://support-ticket-frontend-mukesh-2026/ --delete
+                    echo "Frontend deployed successfully to S3"
+                '''
             }
         }
     }
